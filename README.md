@@ -1,32 +1,16 @@
-![Outlier.org](https://i.imgur.com/vJowpL1.png)
+# Outlier-Org Test Task
 
----
-
-# Outlier Engineering Git Challenge
-
-At Outlier, you will be expected to be able to contribute features and fixes without causing conflicts and other version control headaches. An important tool for keeping codebases clean is `git rebase`. This challenge will test your understanding of a basic codebase and your ability to use `git rebase` properly.
-
-## The Challenge
-
-There are two pull requests open on this repo. Each change is in its own branch. The challenge is to use `git rebase` to add both changes to `master`. When you are finished, your `master` branch should have three commits in the following order:
-
-```
-* feat: add base64 endpoint
-* feat: add user-agent endpoint
-* init
-```
-
-_ Any errors, missing features, missing tests, or failing tests will disqualify the solution. _
-
-## Instructions
-
-How to attempt this challenge:
-
-1) Create a new repo in your account and note the git url
-2) Clone this repo
-3) Solve the challenge
-4) Set your new repo as the origin: `git remote set-url origin ${your repo url}`
-5) Push your solution to your repo
-
-You must follow these steps for your solution to be accepted -- forks or other methods will not be considered.
-
+1. Clone the repository:
+   git clone https://github.com/outlier-org/challenge-git.git
+   cd challenge-git
+2. fetch Pull requests :
+    git fetch origin pull/3/head:feat/add-base64-endpoint
+    git fetch origin pull/4/head:feat/add-user-agent-endpoint
+3. git checkout master
+4. git rebase feat/add-base64-endpoint
+5. Resolve conflicts if any during the rebase process.
+6. git rebase feat/add-user-agent-endpoint
+7. Resolve conflicts if any during this rebase process.
+8. Push the changes to your new repository
+    git remote set-url origin <github _url>
+    git push origin master
